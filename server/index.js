@@ -24,6 +24,10 @@ mongoose.connect(config.mongoURI, { // 데이터베이스 연결
 
 app.get('/', (req, res) => res.send('Hello world! 안녕!!')) // root 디렉토리에 접근하면 Hello world!를 출력
 
+app.get('/api/hello', (req, res) => {
+  res.send("안녕하세요~")
+})
+
 app.post('/api/users/register', (req, res) => {
 
   // 회원 가입할 때 필요한 정보들을 client에서 가져오면
